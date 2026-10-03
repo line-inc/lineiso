@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="EndeavourOS_Triton"
-iso_label="EOS_$(date +%Y%m)"
-iso_publisher="EndeavourOS <https://endeavouros.com>"
-iso_application="EndeavourOS Live/Rescue CD"
+iso_name="LineOS_Cookie"
+iso_label="LOS_$(date +%Y%m)"
+iso_publisher="LineOS <https://lineinc.ro>"
+iso_application="LineOS Live/Rescue CD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
