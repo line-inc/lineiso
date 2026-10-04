@@ -1,3 +1,3 @@
 # LineISO
 
-Repo information is still being worked on, please wait for a few days...
+Repository for the LineOS installer ISO, and also naturally, LineOS itself.
