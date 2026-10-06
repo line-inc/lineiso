@@ -68,7 +68,7 @@ if [[ $supported_found -eq 1 ]]; then
     log "==== inxi -Naz output end ===="
 
     # Ask user with YAD dialog
-    WICON="/usr/share/endeavouros/EndeavourOS-icon.png"
+    WICON="/usr/share/lineos/LineOS-icon.png"
     [ -e $WICON ] || WICON="dialog-information"  # fallback
     YAD=(yad --window-icon="$WICON" --center --title='Broadcom wireless device management')
     if "${YAD[@]}" --image=dialog-question --text="Broadcom-wl compatible device [$id] found.\nDo you want to run the install script?\n"; then

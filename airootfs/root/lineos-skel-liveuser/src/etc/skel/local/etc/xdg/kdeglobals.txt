@@ -1,0 +1,7 @@
+[KDE]
+LookAndFeelPackage=com.lineos.breezedarklos.desktop
+
+[General]
+AccentColor=146,110,228
+LastUsedCustomAccentColor=146,110,228
+

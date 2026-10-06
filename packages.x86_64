@@ -5,8 +5,8 @@ iptables
 base
 base-devel
 archlinux-keyring
-endeavouros-mirrorlist
-endeavouros-keyring
+lineos-mirrorlist
+lineos-keyring
 cryptsetup
 device-mapper
 diffutils
@@ -211,7 +211,7 @@ bluedevil
 breeze-gtk
 dolphin
 dolphin-plugins
-endeavouros-konsole-colors
+lineos-konsole-colors
 ffmpegthumbs
 fwupd
 gwenview
@@ -270,22 +270,22 @@ ttf-dejavu
 ttf-liberation
 ttf-opensans
 
-# ENDEAVOUROS REPO
+# LINEOS REPO
 
 ## General
-eos-apps-info
-eos-hooks
-eos-log-tool
-eos-packagelist
-eos-quickstart
-eos-rankmirrors
+lineos-apps-info
+lineos-hooks
+lineos-log-tool
+lineos-packagelist
+lineos-quickstart
+lineos-rankmirrors
 rate-mirrors
 reflector-simple
 welcome
 yay
 paru
 
-## Calamares EndeavourOS
+## Calamares LineOS
 calamares
 ckbcomp
 

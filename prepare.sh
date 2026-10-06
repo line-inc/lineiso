@@ -12,8 +12,7 @@ magick airootfs/root/livewall-original.png \
   -annotate +10+10 "$(date '+%Y-%m-%d')" \
   airootfs/root/livewall.png
 
-# Get wallpaper for installed system
-wget -qN --show-progress -P "airootfs/root/" "https://raw.githubusercontent.com/endeavouros-team/Branding/master/backgrounds/endeavouros-wallpaper.png"
+# Wallpaper for installed system is already included in airootfs/usr/share/lineos/backgrounds/
 
 
 # Make sure build scripts are executable
@@ -33,5 +32,5 @@ get_pkg() {
 get_pkg "eos-settings-plasma"
 
 # Build liveuser skel
-cd "airootfs/root/endeavouros-skel-liveuser"
+cd "airootfs/root/lineos-skel-liveuser"
 makepkg -f

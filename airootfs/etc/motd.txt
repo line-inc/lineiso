@@ -1,0 +1,40 @@
+This ISO is based on Arch-ISO modified to provide Installation Environment for Line OS.
+https://lineinc.ro
+
+Line OS-archiso Sources:
+https://github.com/line-inc/lineiso
+
+Arch-ISO Source:
+https://gitlab.archlinux.org/archlinux/archiso
+
+Calamares as our installer:
+https://calamares.codeberg.page
+
+Live environment will start now and let you install Line OS to disk, or tryout KDE-Desktop from Live-Session.
+
+Bugs with the installation can be reported here:
+https://github.com/line-inc/lineiso/issues
+
+Getting help at the forum: https://forum.lineinc.ro
+Help-Chat is available on telegram: https://t.me/LineOS/
+News: https://mastodon.social/@LineOS
+
+Our journey wouldn't be made possible without the generosity of our open collective community:
+https://opencollective.com/lineos
+
+Thank you for donating your trust in us!
+
+You can explore and test Line OS on your hardware without installing anything.
+
+Please note the following about the Live environment:
+
+- The Live session runs entirely from the ISO, changes to packages or system settings cannot be saved.
+
+- Hardware or driver support in the Live session may be limited.
+
+- The Live ISO is not intended for daily use.
+
+
+Welcome to Line OS
+
+------------------

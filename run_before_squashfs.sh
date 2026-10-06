@@ -43,7 +43,7 @@ cd "/root"
 
 echo "---> Init & Populate keys --->"
 pacman-key --init
-pacman-key --populate archlinux endeavouros
+pacman-key --populate archlinux lineos
 echo "---> generating actual ranked mirrorlist to fetch packages for offline install---> "
 cp -a "/etc/pacman.d/mirrorlist" "/etc/pacman.d/mirrorlist-from-package"
 mkdir -p "/etc/pacman.d/"
@@ -74,7 +74,7 @@ mkdir -p "/root/filebackups/"
 cp -af "/etc/skel/"{".bashrc",".bash_profile"} "/root/filebackups/"
 
 echo "---> Install liveuser skel (in case of conflicts use overwrite) --->"
-pacman -U --noconfirm --overwrite "/etc/skel/.bash_profile","/etc/skel/.bashrc" -- "/root/endeavouros-skel-liveuser/"*".pkg.tar.zst"
+pacman -U --noconfirm --overwrite "/etc/skel/.bash_profile","/etc/skel/.bashrc" -- "/root/lineos-skel-liveuser/"*".pkg.tar.zst"
 echo "---> start validate skel files --->"
 ls /etc/skel/.*
 ls /etc/skel/
@@ -95,15 +95,15 @@ rm "/root/liveuser.png"
 
 echo "---> Remove liveuser skel to clean for target skel --"
 pacman -Sy
-pacman -Rns --noconfirm -- "endeavouros-skel-liveuser"
-rm -rf "/root/endeavouros-skel-liveuser"
+pacman -Rns --noconfirm -- "lineos-skel-liveuser"
+rm -rf "/root/lineos-skel-liveuser"
 
 echo "---> setup theming for root user --->"
 cp -a "/root/root-theme" "/root/.config"
 rm -R "/root/root-theme"
 
 echo "---> Add builddate to motd --->"
-cat "/usr/lib/endeavouros-release" >> "/etc/motd"
+cat "/usr/lib/lineos-release" >> "/etc/motd"
 echo "------------------" >> "/etc/motd"
 
 echo "---> Install locally built packages on ISO (place packages under airootfs/root/packages) --->"
@@ -123,9 +123,9 @@ echo " --> per default now in airootfs/etc/systemd/system/multi-user.target.want
 systemctl set-default multi-user.target
 
 echo "---> Set wallpaper for live-session and original for installed system --->"
-mv "/root/endeavouros-wallpaper.png" "/etc/calamares/files/endeavouros-wallpaper.png"
-mv "/root/livewall.png" "/usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png"
-chmod 644 "/usr/share/endeavouros/backgrounds/"*".png"
+mv "/root/lineos-wallpaper.png" "/etc/calamares/files/lineos-wallpaper.png"
+mv "/root/livewall.png" "/usr/share/lineos/backgrounds/lineos-wallpaper.png"
+chmod 644 "/usr/share/lineos/backgrounds/"*".png"
 
 echo "---> install bash configs back into /etc/skel for offline install target --->"
 cp -af "/root/filebackups/"{".bashrc",".bash_profile"} "/etc/skel/"

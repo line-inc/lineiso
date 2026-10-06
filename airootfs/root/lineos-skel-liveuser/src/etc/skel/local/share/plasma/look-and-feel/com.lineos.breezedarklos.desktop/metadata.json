@@ -1,0 +1,11 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Category": "",
+        "Description": "Breeze Dark Line OS",
+        "Id": "com.lineos.breezedarklos.desktop",
+        "License": "GPLv2+",
+        "Name": "Breeze Dark Line OS",
+        "Website": "https://www.kde.org"
+    }
+}

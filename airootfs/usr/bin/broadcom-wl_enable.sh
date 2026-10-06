@@ -4,7 +4,7 @@
 LOG_FILE="$HOME/broadcom-wl-wifi-activation.log"
 exec > >(tee -a "$LOG_FILE") 2>&1
 
-WICON="/usr/share/endeavouros/EndeavourOS-icon.png"
+WICON="/usr/share/lineos/LineOS-icon.png"
 [ -e $WICON ] || WICON="dialog-information"    # fallback
 
 YAD=(yad --center --window-icon="$WICON")

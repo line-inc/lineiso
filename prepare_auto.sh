@@ -5,7 +5,7 @@ BUILD_USER="iso-builder-temp"
 mv profiledef.sh_auto profiledef.sh
 
 # use different wallpaper in case (uncomment aand edit url to do so)
-#wget -qN --show-progress -O "airootfs/root/livewall.png" "https://raw.githubusercontent.com/UncleSpellbinder/EndeavourOS-HD-Wallpaper/refs/heads/main/EndeavourOS_ArtemisII_1A2__3840x2160.png"
+#wget -qN --show-progress -O "airootfs/root/livewall.png" "https://raw.githubusercontent.com/line-inc/LineOS-HD-Wallpaper/refs/heads/main/LineOS_ArtemisII_1A2__3840x2160.png"
 
 echo "---> add date to wallpaper ---> "
 cp airootfs/root/livewall.png airootfs/root/livewall-original.png
@@ -21,8 +21,7 @@ magick airootfs/root/livewall-original.png \
   
 echo "<--- add date to wallpaper done <--- "
 
-echo "---> Get wallpaper for installed system ---> "
-wget -qN --show-progress -P "airootfs/root/" "https://raw.githubusercontent.com/endeavouros-team/Branding/master/backgrounds/endeavouros-wallpaper.png"
+echo "---> Wallpaper for installed system already included ---> "
 
 echo "---> Make sure build scripts are executable ---> "
 chmod +x "./"{"mkarchiso","run_before_squashfs.sh"}

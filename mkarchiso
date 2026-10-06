@@ -56,13 +56,13 @@ readonly -A uefi_arch=(
     ['loongarch64']='LOONGARCH64'
 )
 
-# change for EndeavourOS start
+# change for Line OS start
 
 script_path="$( cd -P "$( dirname "$(readlink -f "$0")" )" && pwd )"
 # executed inside _mkairootfs_sfs right before squashfs
 RUN_BEFORE_SQUASHFS="$script_path/run_before_squashfs.sh"
 
-# change for EndeavourOS end
+# change for Line OS end
 
 # Show an INFO message
 # $1: message string
@@ -164,13 +164,13 @@ _show_config() {
 _cleanup_pacstrap_dir() {
     _msg_info "Cleaning up in pacstrap location..."
 
-# change for EndeavourOS start
+# change for Line OS start
 
-    # Pull /usr/lib/endeavouros-release at place to use for prompt info in Live Session
+    # Pull /usr/lib/lineos-release at place to use for prompt info in Live Session
     mkdir -p "${pacstrap_dir}/usr/lib"
-    echo "VERSION=${iso_version}" >> "${pacstrap_dir}/usr/lib/endeavouros-release"
+    echo "VERSION=${iso_version}" >> "${pacstrap_dir}/usr/lib/lineos-release"
 
-# change for EndeavourOS end
+# change for Line OS end
 
     # Delete all files in /boot
     [[ -d "${pacstrap_dir}/boot" ]] && find "${pacstrap_dir}/boot" -mindepth 1 -delete
@@ -198,11 +198,11 @@ _cleanup_pacstrap_dir() {
 # $@: options to pass to mksquashfs
 _run_mksquashfs() {
 
-# change for EndeavourOS start
+# change for Line OS start
 
     "$RUN_BEFORE_SQUASHFS"
 
-# change for EndeavourOS end
+# change for Line OS end
 
     local mksquashfs_options=() image_path="${isofs_dir}/${install_dir}/${arch}/airootfs.sfs"
     rm -f -- "${image_path}"
@@ -1705,7 +1705,7 @@ _make_version() {
         install -d -m 755 -- "${isofs_dir}/boot"
         : >"${isofs_dir}${search_filename}"
     fi
-# change for EndeavourOS start
+# change for Line OS start
 
     # Append IMAGE_ID & IMAGE_VERSION to os-release
     #_os_release="$(realpath -- "${pacstrap_dir}/etc/os-release")"
@@ -1719,7 +1719,7 @@ _make_version() {
     #    printf 'IMAGE_ID=%s\nIMAGE_VERSION=%s\n' "${iso_name}" "${iso_version}" >>"${_os_release}"
     #fi
 
-# change for EndeavourOS end
+# change for Line OS end
 
     # Touch /usr/lib/clock-epoch to give another hint on date and time
     # for systems with screwed or broken RTC.
@@ -1842,9 +1842,9 @@ _build_buildmode_netboot() {
 
 # Build the ISO buildmode
 _build_buildmode_iso() {
-# change for EndeavourOS start
+# change for Line OS start
     local image_name="${iso_name}-${iso_version}.iso"
-# change for EndeavourOS end
+# change for Line OS end
     local run_once_mode="${buildmode}"
     efibootimg="${work_dir}/efiboot.img"
     _build_iso_base
